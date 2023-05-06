@@ -1,3 +1,5 @@
+// ignore_for_file: empty_catches
+
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
@@ -15,7 +17,6 @@ class WeatherService {
       Map<String, dynamic> data = jsonDecode(response.body);
       weatherData = WeatherModel.fromJson(data);
     } catch (e) {
-      print(e);
     }
     return weatherData;
   }
